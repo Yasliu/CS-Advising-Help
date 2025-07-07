@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dev</title>
+</head>
+<body>
+
+
+    <link rel="stylesheet" href="CSS Files/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <!--DropDown-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Career Paths</a>
+                <ul class="dropdown">
+                    <li><a href="software.html">Software Developer</a>
+                        <ul>
+                            <li>Software Engineer</li>
+                            <li>Backend Engineer</li>
+                            <li>System Analyst</li>
+                            <li>DevOps Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="ai.html">Machine Learning</a>
+                        <ul>
+                            <li>AI Engineering</li>
+                            <li>Data Scientist</li>
+                            <li>Computer Vision Engineer</li>
+                            <li>NLP Engineer</li>
+                            <li>Research Scientist(AI)</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="cyber.html">Cyber Security</a>
+                        <ul>
+                            <li>Network Engineer</li>
+                            <li>Cyber Security Analyst</li>
+                            <li>Network Administrator</li>
+                            <li>Cloud Infrastructure Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="algorithm.html">Algorithms</a>
+                        <ul>
+                            <li>Algorithm Engineer</li>
+                            <li>Theoretical CS Researcher</li>
+                            <li>Competitive Programmer</li>
+                            <li>University Lecturer</li>
+                            <li>Compiler Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="hardware.html">Embedded Systems</a>
+                        <ul>
+                            <li>Embedded Systems Engineer</li>
+                            <li>IoT Developer</li>
+                            <li>Firmware Engineer</li>
+                            <li>VLSI Engineer</li>
+                            <li>Digital Systems Designer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="signal.html">Signal Processing</a>
+                        <ul>
+                            <li>DSP Engineer</li>
+                            <li>Speech Recognition Engineer</li>
+                            <li>Audio Signal Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="data.html">Data Engineering</a>
+                        <ul>
+                            <li>Database Administrator (DBA)</li>
+                            <li>Data Engineer</li>
+                            <li>ETL Developer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="system.html">System Design</a>
+                        <ul>
+                            <li>Simulation Engineering</li>
+                            <li>System Designer</li>
+                            <li>Business Analyst</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="general.html">General Research</a>
+                        <ul>
+                            <li>If you are planning to do higher studies(MS / PhD)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="main.html">Flow Chart</a></li>
+        </ul>
+    </nav>
+
+        <div>
+        <div class="info">
+            <h1 id="Header">Game Developer</h1>
+            <h2 id="info_H">Information</h2>
+            <div class="Info_courses">
+                A Game Developer is a software professional who designs, builds, and maintains video games for various platforms such as PC, consoles (PlayStation, Xbox, Nintendo), and mobile (Android, iOS). 
+                They write the underlying code, work with game engines like Unity or Unreal Engine, and collaborate with artists, designers, and sound engineers to bring interactive experiences to life.
+            </div>
+
+
+        <div class="container">
+            <div class="courses">
+                <ul class="course_list">
+                    <li>CSE423</li>
+                </ul>
+
+                <ul class="elective"> 
+                    <li>CSE 429</li>
+                    <li>CSE 428</li>
+                    <li>CSE 472</li>
+                </ul>
+            </div>
+        </div>
+        
+
+            <link rel="stylesheet" href="CSS Files/accordion.css">
+            <h1 class="Accordion_H">Main Courses</h1>
+            <ul class="accordion">
+                <li>
+                    <input type="checkbox" name="accordion" id="first" >
+                    <label for="first">CSE 423</label>
+                    <div class="content">
+                        <div class="courseInfoInject" data-course-id="CSE423"></div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <h1 class="Accordion_H">Elective Courses</h1>
+            <ul class="accordion">
+
+                <li>
+                    <input type="checkbox" name="accordion" id="second" >
+                    <label for="second">CSE 429</label>
+                    <div class="content">
+                        <div class="courseInfoInject" data-course-id="CSE429"></div>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="accordion" id="third" >
+                    <label for="third">CSE 428</label>
+                    <div class="content">
+                        <div class="courseInfoInject" data-course-id="CSE428"></div>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="accordion" id="fourth" >
+                    <label for="fourth">CSE 472</label>
+                    <div class="content">
+                        <div class="courseInfoInject" data-course-id="CSE472"></div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    <script>
+    fetch("courseInfo.html")
+        .then(res => res.text())
+        .then(html => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = html;
+    const store = tempDiv.querySelector("#courseInfoStore");
+
+    document.querySelectorAll(".courseInfoInject").forEach(target => {
+      const id = target.dataset.courseId;
+      const info = store.querySelector(`[data-id="${id}"]`);
+      if (info) {
+        target.innerHTML = info.innerHTML;
+      } else {
+        target.innerHTML = "<p>No info found.</p>";
+      }
+    });
+  })
+  .catch(err => console.error("Failed to load course info:", err));
+</script>
+</body>
+</html>

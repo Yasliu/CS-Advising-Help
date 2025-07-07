@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Engineering</title>
+</head>
+<body>
+
+
+    <link rel="stylesheet" href="CSS Files/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com">
+    <!--DropDown-->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li>
+                <a href="#">Career Paths</a>
+                <ul class="dropdown">
+                    <li><a href="software.html">Software Developer</a>
+                        <ul>
+                            <li>Software Engineer</li>
+                            <li>Backend Engineer</li>
+                            <li>System Analyst</li>
+                            <li>DevOps Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="ai.html">Machine Learning</a>
+                        <ul>
+                            <li>AI Engineering</li>
+                            <li>Data Scientist</li>
+                            <li>Computer Vision Engineer</li>
+                            <li>NLP Engineer</li>
+                            <li>Research Scientist(AI)</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="cyber.html">Cyber Security</a>
+                        <ul>
+                            <li>Network Engineer</li>
+                            <li>Cyber Security Analyst</li>
+                            <li>Network Administrator</li>
+                            <li>Cloud Infrastructure Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="algorithm.html">Algorithms</a>
+                        <ul>
+                            <li>Algorithm Engineer</li>
+                            <li>Theoretical CS Researcher</li>
+                            <li>Competitive Programmer</li>
+                            <li>University Lecturer</li>
+                            <li>Compiler Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="hardware.html">Embedded Systems</a>
+                        <ul>
+                            <li>Embedded Systems Engineer</li>
+                            <li>IoT Developer</li>
+                            <li>Firmware Engineer</li>
+                            <li>VLSI Engineer</li>
+                            <li>Digital Systems Designer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="game.html">Game Development</a>
+                        <ul>
+                            <li>Game Developer</li>
+                            <li>Grpahics Programmer</li>
+                            <li>UI/UX Designer</li>
+                            <li>Multimedia Developer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="signal.html">Signal Processing</a>
+                        <ul>
+                            <li>DSP Engineer</li>
+                            <li>Speech Recognition Engineer</li>
+                            <li>Audio Signal Engineer</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="system.html">System Design</a>
+                        <ul>
+                            <li>Simulation Engineering</li>
+                            <li>System Designer</li>
+                            <li>Business Analyst</li>
+                        </ul>
+                    </li>
+
+                    <li><a href="general.html">General Research</a>
+                        <ul>
+                            <li>If you are planning to do higher studies(MS / PhD)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="main.html">Flow Chart</a></li>
+        </ul>
+    </nav>
+
+        <div>
+        <div class="info">
+            <h1 id="Header">Data Engineering</h1>
+            <h2 id="info_H">Information</h2>
+            <div class="Info_courses">
+                <p>Data Engineering is the backbone of modern data-driven decision-making. It involves designing, building, and maintaining robust systems that collect, 
+                    store, and move data efficiently and reliably for analytics, business intelligence, and machine learning.</p>   
+                    <br>
+                <p>If you enjoy structuring messy data, building pipelines, and optimizing data flow between systems—this is your lane.</p>
+            </div>
+
+
+        <div class="container">
+            <div class="courses">
+                <ul class="course_list">
+      
+                    <li>CSE 370</li> 
+
+                </ul>
+
+                <ul class="elective"> 
+                   
+                    <li>CSE 473</li>
+                    <li>CSE 474</li>
+
+                </ul>
+            </div>
+        </div>
+        
+
+            <link rel="stylesheet" href="CSS Files/accordion.css">
+            <h1 class="Accordion_H">Main Courses</h1>
+            <ul class="accordion">
+                <li>
+                    <input type="checkbox" name="accordion" id="first" >
+                    <label for="first">CSE 370</label>
+                    <div class="content">
+                        <div class="courseInfoInject" data-course-id="CSE370"></div>
+                    </div>
+                </li>
+            </ul>
+
+            <h1 class="Accordion_H">Elective Courses</h1>
+            <ul class="accordion">
+
+                <li>
+                    <input type="checkbox" name="accordion" id="second" >
+                    <label for="second">CSE 473</label>
+                    <div class="content">
+                        <div class="courseInfoInject" data-course-id="CSE473"></div>
+                    </div>
+                </li>
+
+                <li>
+                    <input type="checkbox" name="accordion" id="third" >
+                    <label for="third">CSE 473</label>
+                    <div class="content">
+                        <div class="courseInfoInject" data-course-id="CSE474"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+    fetch("courseInfo.html")
+        .then(res => res.text())
+        .then(html => {
+    const tempDiv = document.createElement("div");
+    tempDiv.innerHTML = html;
+    const store = tempDiv.querySelector("#courseInfoStore");
+
+    document.querySelectorAll(".courseInfoInject").forEach(target => {
+      const id = target.dataset.courseId;
+      const info = store.querySelector(`[data-id="${id}"]`);
+      if (info) {
+        target.innerHTML = info.innerHTML;
+      } else {
+        target.innerHTML = "<p>No info found.</p>";
+      }
+    });
+  })
+  .catch(err => console.error("Failed to load course info:", err));
+</script>
+</body>
+</html>

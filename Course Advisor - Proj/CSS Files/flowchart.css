@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  margin: 0;
+  background-color: rgb(196, 251, 255);
+}
+
+.container {
+  position: relative;
+  max-width: 1300px;
+  width: 100%;
+  height: 1000px; /* fixed height */
+  margin: 0 auto;
+  overflow: visible; /* IMPORTANT: allow overflow visible to prevent scrollbars */
+  border: 1px solid #f5e3e3;
+  background: #c8e6f7;
+  border-radius: 20px;
+  box-shadow:6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7) ;
+  
+}
+
+.course {
+  position: absolute;
+  padding: 12px 18px;
+  background-color: #3b4b44;
+  color: white;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+
+  font-family: 'Fira Code', monospace;
+}
+
+.course:hover {
+  background-color: #615554;
+}
+
+
+#connections {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  /* make svg fill container */
+  height: 100%; /* make svg fill container */
+  pointer-events: none; /* allow clicks to pass through */
+  z-index: 0;
+}
+
+.connector-line {
+  stroke: black;
+  stroke-width: 5;
+}
+
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: -650px;
+  width: 600px;
+  height: 100vh;
+  background-color: #d3e5f5;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+  transition: right 0.3s ease-in-out;
+  z-index: 999;
+  padding: 20px;
+  overflow-y: auto;
+  opacity: 0.95;
+}
+
+.side-panel.open {
+  right: 0;
+}
+
+.side-panel h2 {
+  margin-top: 0;
+}
+
+#closePanel {
+  background: #d4301d;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+.titleh {
+  text-align: center;
+  margin: 20px auto;
+  background-color: #cbe2e0;
+  width: 90%;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.course-info h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.topics {
+  margin: 20px;
+  text-align: center;
+}
+
+.compulsory {
+  margin: 20px auto;
+  padding-bottom: 20px;
+}
+
+.list li{
+  padding: 10px;
+  list-style: none;
+}
+
+.test {
+  margin: 20px auto;
+  padding-bottom: 20px;
+}
+
+.no-info {
+  text-align: center;
+}
+
+#courseInfoStore {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #e3edf7;
+
+}
+
+.accordion{
+    margin: auto;
+    width: 1200px;
+
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+label::before{
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.accordion .content{
+    color: #555;
+    padding: 0 10px;
+    line-height: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding 0.5s ease;
+    will-change: max-height, padding;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content{
+    max-height: none;
+    padding: 10px 10px 20px;
+}
+
+.accordion input[type="checkbox"]:checked + label::before{
+    content: '-';
+}
+
+.accordion [type="checkbox"] {
+    display: none;
+}
+
+.courses ul{
+    list-style: none;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #e3edf7;
+    box-shadow:6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+
+#Header {
+    padding: 15px;
+    background-color: #e3edf7;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    width: 100;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    width: 95%;
+}
+
+.Info_courses  {
+    background-color: #e3edf7;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    text-align: center;
+    border-radius: 10px;
+    width: 81%;
+    padding: 15px;
+
+
+}
+
+#info_H {
+    text-align: center;
+    margin: 15px auto;
+    box-shadow:6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    background-color: #e3edf7;
+    width: 50%;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.Accordion_H {
+    text-align: center;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    margin: 30px auto;
+    margin-top: 50px;
+    padding: 15px;
+    width: 50%;
+}
+
+.course_list li, .elective li {
+    font-family: 'Fira Code', monospace;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.course_list::before {
+  content: "Courses Needed";
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.elective::before {
+  content: "Elective Courses";
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.accordion label {
+    font-family: 'Fira Code', monospace;
+}
+
+.courseInfoInject {
+    padding: 20px;
+}
