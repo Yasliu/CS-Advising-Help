@@ -134,3 +134,39 @@ body {
 
 
 
+@media (max-width: 768px) {
+  .container, .accordion, .Info_courses, .Accordion_H, #info_H, #Header,
+  .main_course, .side-panel, .course {
+    width: 90% !important;
+    left: 0 !important;
+    right: 0 !important;
+    position: relative !important;
+    font-size: 16px;
+  }
+
+  .navbar ul li {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar ul li ul.dropdown {
+    grid-template-columns: repeat(1, 1fr);
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+
+  .course {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .side-panel {
+    width: 100%;
+    right: -100%;
+  }
+}
