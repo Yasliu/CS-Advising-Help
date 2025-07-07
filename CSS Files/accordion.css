@@ -165,43 +165,11 @@ label::before{
     padding: 20px;
 }
 
-@media (max-width: 768px) {
-  .accordion {
-    width: 95%;
-  }
-
-  .accordion li {
-    padding: 8px;
-  }
-
-  .accordion li label {
-    font-size: 16px;
-    padding: 8px;
-  }
-
-  .accordion .content {
-    padding: 0 8px;
-    line-height: 22px;
-    font-size: 14px;
-  }
-
-  .courses ul {
-    width: 95%;
-    padding: 10px;
-  }
-
-  #Header,
-  #info_H,
-  .Accordion_H,
-  .Info_courses {
-    width: 95% !important;
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .course_list li,
-  .elective li {
-    font-size: 14px;
-  }
+.navbar  {
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
+
+
+
 
