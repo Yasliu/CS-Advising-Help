@@ -51,7 +51,7 @@ body {
 
 .connector-line {
   stroke: rgb(255, 255, 255);
-  stroke-width: 5;
+  stroke-width: 2;
 }
 
 .side-panel {
@@ -78,18 +78,6 @@ body {
 
 .side-panel h2 {
   margin-top: 0;
-}
-
-
-
-.titleh {
-  text-align: center;
-  margin: 20px auto;
-  background-color: #0A1C3D;
-  width: 90%;
-  border-radius: 20px;
-  padding: 10px;
-  color: white;
 }
 
 .course-info h2 {

@@ -26,7 +26,7 @@ body{
     margin: 10px auto;
     padding: 5px;
     border-radius: 8px;
-    background-color: #2868c6;
+    background-color: #0d3d85;
 }
 
 .accordion li label{
@@ -136,7 +136,7 @@ label::before{
     margin-top: 50px;
     padding: 15px;
     width: 50%;
-
+    background-color: #163061;
     color: white;
 }
 
