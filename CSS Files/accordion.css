@@ -8,7 +8,7 @@
 }
 
 body{
-    background: #e3edf7;
+    background: #1d1f5a;
     overflow-x: hidden;
 
 }
@@ -26,9 +26,7 @@ body{
     margin: 10px auto;
     padding: 5px;
     border-radius: 8px;
-    background-color: #e3edf7;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    background-color: #2868c6;
 }
 
 .accordion li label{
@@ -38,6 +36,8 @@ body{
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
+
+    color: white;
 }
 
 label::before{
@@ -48,7 +48,7 @@ label::before{
 }
 
 .accordion .content{
-    color: #555;
+    color: #ffffff;
     padding: 0 10px;
     line-height: 25px;
     max-height: 0;
@@ -86,28 +86,31 @@ label::before{
 
 #Header {
     padding: 15px;
-    background-color: #e3edf7;
+    background-color: #0A1C3D;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+                -6px -6px 10px -1px rgba(22, 20, 20, 0.7);
     width: 100;
     text-align: center;
     border-radius: 10px;
     margin: 10px auto;
     margin-bottom: 30px;
     width: 95%;
+
+    color: white;
 }
 
 .Info_courses  {
-    background-color: #e3edf7;
+    background-color: #3F3381;
     margin: 10px auto;
     margin-bottom: 30px;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+                -6px -6px 10px -1px rgba(22, 20, 20, 0.7);
     text-align: center;
     border-radius: 10px;
     width: 81%;
     padding: 15px;
 
+    color: white;
 
 }
 
@@ -115,22 +118,26 @@ label::before{
     text-align: center;
     margin: 15px auto;
     box-shadow:6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
-    background-color: #e3edf7;
+                -6px -6px 10px -1px rgba(14, 13, 13, 0.7);
+    background-color: #0A1C3D;
     width: 50%;
     border-radius: 10px;
     padding: 15px;
+
+    color: white;
 }
 
 .Accordion_H {
     text-align: center;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+                -6px -6px 10px -1px rgba(20, 19, 19, 0.7);
     border-radius: 10px;
     margin: 30px auto;
     margin-top: 50px;
     padding: 15px;
     width: 50%;
+
+    color: white;
 }
 
 .course_list li, .elective li {
@@ -139,22 +146,18 @@ label::before{
     letter-spacing: 1px;
 }
 
-.course_list::before {
-  content: "Courses Needed";
-  display: block;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-}
+#courses-needed {
+    text-align: center;
+    margin: 3vw auto;
+    background-color: #0a1c3d;
+    width: 80%;
+    border-radius: 2em;
+    padding: 1em;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+                -6px -6px 10px -1px rgba(29, 27, 27, 0.7);
 
-.elective::before {
-  content: "Elective Courses";
-  display: block;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+    color: white;
+
 }
 
 .accordion label {
@@ -167,7 +170,7 @@ label::before{
 
 .navbar  {
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+                -6px -6px 10px -1px rgba(20, 17, 17, 0.7);
 }
 
 

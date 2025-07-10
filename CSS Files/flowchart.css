@@ -3,7 +3,7 @@
 
 body {
   margin: 0;
-  background-color: rgb(196, 251, 255);
+  background-color: #1D1F5A;
 }
 
 .container {
@@ -13,18 +13,18 @@ body {
   height: 1000px; /* fixed height */
   margin: 0 auto;
   overflow: visible; /* IMPORTANT: allow overflow visible to prevent scrollbars */
-  border: 1px solid #f5e3e3;
-  background: #c8e6f7;
+  border: 1px solid #191a52;
+  background: #0A1C3D;
   border-radius: 20px;
   box-shadow:6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-                -6px -6px 10px -1px rgba(255, 255, 255, 0.7) ;
+                -6px -6px 10px -1px rgba(22, 17, 17, 0.7) ;
   
 }
 
 .course {
   position: absolute;
   padding: 12px 18px;
-  background-color: #3b4b44;
+  background-color: #2868C6;
   color: white;
   border-radius: 8px;
   font-weight: bold;
@@ -35,7 +35,7 @@ body {
 }
 
 .course:hover {
-  background-color: #615554;
+  background-color: #91D2F4;
 }
 
 
@@ -50,7 +50,7 @@ body {
 }
 
 .connector-line {
-  stroke: black;
+  stroke: rgb(255, 255, 255);
   stroke-width: 5;
 }
 
@@ -60,13 +60,16 @@ body {
   right: -650px;
   width: 600px;
   height: 100vh;
-  background-color: #d3e5f5;
+  background-color: #3F3381;
   box-shadow: -2px 0 10px rgba(0,0,0,0.3);
   transition: right 0.3s ease-in-out;
   z-index: 999;
   padding: 20px;
   overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   opacity: 0.95;
+  color: white;
 }
 
 .side-panel.open {
@@ -77,23 +80,16 @@ body {
   margin-top: 0;
 }
 
-#closePanel {
-  background: #d4301d;
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  font-weight: bold;
-  float: right;
-  cursor: pointer;
-}
+
 
 .titleh {
   text-align: center;
   margin: 20px auto;
-  background-color: #cbe2e0;
+  background-color: #0A1C3D;
   width: 90%;
   border-radius: 20px;
   padding: 10px;
+  color: white;
 }
 
 .course-info h2 {

@@ -101,6 +101,19 @@ document.addEventListener("DOMContentLoaded", () => {
     ["MAT120", "MAT215c"],
   ];
 
+  document.addEventListener("click", (event) => {
+  const panel = document.getElementById("sidePanel");
+  const isOpen = panel.classList.contains("open");
+
+  if (!isOpen) return;
+
+  // Check if the click was outside the panel
+  if (!panel.contains(event.target) && !event.target.classList.contains("course")) {
+    panel.classList.remove("open");
+  }
+});
+
+
   renderFlowchart("flowchart1", mainLayout, mainConnections);
 
   // Elective flowchart layout & connections

@@ -9,22 +9,33 @@
 div > h1 {
     text-align: center;
     margin: auto;
-    background-color: azure;
+    background-color: #0a1c3d;
+    color: white;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 1em;
+    width: 80%;
 }
 
 .info {
     padding: 10px;
     text-align: center;
-    background-color: aliceblue;
-    margin-top: 10px;
+    background-color: #0a1c3d;
+    margin: 2vh auto; 
+
+    border-radius: 2em;
+    color: white;
+    
 }
 
 .list {
     text-align: center;
-    margin-top: 10px;
-    background-color: aliceblue;
+    margin: 2vh auto;
+    background-color: #0a1c3d;
+
+    width: 80%;
+    border-radius: 2em;
+    padding: 2vh;
+    color: white;
 
 }
 
@@ -34,26 +45,47 @@ div > ul > h3 {
     
 }
 
-button {
-    padding: 8px;
-    background-color: beige;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: all 0.5s ;
-    border: none;
-    margin: 5px;
-    width: 200px;
-    font-size: 28px;
+.Advising {
+    padding: 3vh;
+    background-color: #2868c6;
+    border-color: #2868c6;
+    font-size: 3vh;
 
+    border-radius: 1em;
+
+    margin: 2vh auto;
 }
 
-
-button:hover {
-    background-color: rgb(196, 182, 182);
+.Advising:hover {
+    background-color: #91d2f4;
 }
 
 
 body {
-    background-color: aliceblue;
+    background-color: #1d1f53;
 }
 
+.Brac {
+    background-color: #2868c6;
+    padding: 4vh;
+
+    border-radius: 2em;
+    font-size: 1em;
+
+    margin: 2vh auto;
+}
+
+.Brac:hover {
+    background-color: #91d2f4;
+}
+
+#author {
+    color: white;
+    margin: 1vh auto;
+    padding: 2vh ;
+}
+
+.todo {
+    margin: 1vh auto;
+    list-style: none;
+}
